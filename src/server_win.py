@@ -1,7 +1,11 @@
 import os
-os.system("pip install flask g4f flask_cors pygetwindow keyboard pypiwin32")
 
-from flask import Flask, request, jsonify
+try:
+    from flask import Flask, request, jsonify
+except:
+    os.system("pip install flask g4f flask_cors pygetwindow keyboard pypiwin32")
+    os.system("cls")    
+
 from g4f.client import Client
 from flask_cors import CORS
 import pygetwindow as gw
