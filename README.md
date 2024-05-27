@@ -4,7 +4,7 @@
 
 *A free, single-threaded, self-hosted, browser-based hCaptcha solver that can run on any computer with low specs. It is NOT an API that you can integrate with DMDGO or similar tools: it needs a real browser to work.*
 
-### ⚠️ HEADS UP: This is only a captcha solver for now. A specific mass DM tool will be released for it very soon. Right now, please test that it solves captchas correctly. If you are having issues, refer to the [Tutorial video](./README.md#tutorial-video) and the [Telegram support server](./README.md#still-having-trouble-join-our-support-server) below.
+### ⚠️ HEADS UP: This is only a captcha solver for now. A specific mass DM tool will be released for it very soon. Right now, please test that it solves captchas correctly. If you are having issues, refer to the [Tutorial video](#tutorial-video) and the [Telegram support server](#still-having-trouble-join-our-support-server) below.
 
 ## Requirements
 - Windows/Mac with lastest Python version installed.
