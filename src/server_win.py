@@ -3,30 +3,25 @@ import time
 
 try:
     from flask import Flask, request, jsonify
-except:
-    os.system("pip install flask g4f flask_cors pygetwindow keyboard pypiwin32")
-try:
     from g4f.client import Client
-except:
-    os.system("pip install g4f")
-try:
     from flask_cors import CORS
-except:
-    os.system("pip install flask_cors")
-try:
     import pygetwindow as gw
-except:
-    os.system("pip install pygetwindow")    
-try:
+    import time
     import keyboard
-except:
-    os.system("pip install keyboard")
-try:
+    import win32gui
     import win32.lib.win32con as win32con
 except:
-    os.system("pip install pypiwin32")
-
-os.system("cls")
+    os.system("pip install flask g4f flask_cors pygetwindow keyboard pypiwin32")
+    os.system("cls")
+finally:
+    from flask import Flask, request, jsonify
+    from g4f.client import Client
+    from flask_cors import CORS
+    import pygetwindow as gw
+    import time
+    import keyboard
+    import win32gui
+    import win32.lib.win32con as win32con
 
 app = Flask(__name__)
 CORS(app, origins='*', allow_headers='*')
