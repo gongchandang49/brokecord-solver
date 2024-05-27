@@ -7,7 +7,6 @@ from flask_cors import CORS
 import pygetwindow as gw
 import time
 import keyboard
-import win32gui
 import win32.lib.win32con as win32con
 
 app = Flask(__name__)
