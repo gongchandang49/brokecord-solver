@@ -4,14 +4,19 @@
 
 *A free, single-threaded, self-hosted, browser-based hCaptcha solver that can run on any computer with low specs. It is NOT an API that you can integrate with DMDGO or similar tools: it needs a real browser to work.*
 
-### ⚠️ HEADS UP: This is only a captcha solver for now. A specific mass DM tool will be released for it very soon. Right now, please test that it solves captchas correctly. If you are having issues, refer to the Tutorial video below and the Telegram support server.
+### ⚠️ HEADS UP: This is only a captcha solver for now. A specific mass DM tool will be released for it very soon. Right now, please test that it solves captchas correctly. If you are having issues, refer to the [Tutorial video](./README.md#tutorial-video) and the [Telegram support server](./README.md#still-having-trouble-join-our-support-server) below.
 
 ## Requirements
 - Windows/Mac with lastest Python version installed.
 - Any Chromium-based browser (Chrome, Edge, Brave, Opera...)
   * **Note**: Does not work on Firefox, Chromium or Chromedriver.
 
-## How to install
+## Things to take into account
+- It will take full control of your keyboard while solving. Please avoid clicking or typing on other places during the captcha solve.
+- You can pause the solver anytime by closing the window with the Python Flask server.
+- It requires the text-based option on the hCaptcha widget (Discord has it). If a site does not have that option, then the solver will not work on it.
+
+## ⚙️ How to install
 - Download and run the Python Flask server specific to your OS. *The window needs to be open (in the background) at all times. Otherwise it will not solve captchas.*
   - **Windows:** [server_win.py](src/server_win.py)    `py server_win.py`
   - **Mac:** [server_mac.py](src/server_mac.py)        `python3 server_mac.py`
@@ -26,8 +31,9 @@
 - Log in your token using Discord Token Login (or otherwise), and let the fun begin!
 - **Any captchas that you encounter when performing actions on the page will automatically be solved by BrokeCord.** You can view solver logs in the browser console (F12) and requests in the Python server window that you opened in step 1.
 
-## Tutorial video
+## 🎥 Tutorial video
+https://github.com/gongchandang49/brokecord-solver/assets/170948611/18ab43b0-64dd-4a73-bf9f-d67bd5c76a71
 
 
-## Still having trouble? Join our Support server!
+## ℹ️ Still having trouble? Join our Support server!
 https://t.me/+LgjJ6Ym0_JU3NmM8
