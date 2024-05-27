@@ -1,15 +1,25 @@
 import os
-try:
-    os.system("python3 -m pip install flask g4f flask_cors pyobjc-framework-Quartz")
-except:
-    os.system("pip3 install flask g4f flask_cors pyobjc-framework-Quartz")
-
-from flask import Flask, request, jsonify
-from g4f.client import Client
-from flask_cors import CORS
-import subprocess
-import Quartz
 import time
+
+try:
+    from flask import Flask, request, jsonify
+    from g4f.client import Client
+    from flask_cors import CORS
+    import subprocess
+    import Quartz
+except:
+    try:
+        os.system("pip3 install flask g4f flask_cors pyobjc-framework-Quartz")
+    except:
+        os.system("python3 -m pip install flask g4f flask_cors pyobjc-framework-Quartz")
+    os.system("clear")
+finally:
+    from flask import Flask, request, jsonify
+    from g4f.client import Client
+    from flask_cors import CORS
+    import subprocess
+    import Quartz
+
 
 app = Flask(__name__)
 CORS(app, origins='*', allow_headers='*')
