@@ -8,7 +8,7 @@ try:
     import pygetwindow as gw
     import time
     import keyboard
-    import pypiwin32 as win32gui
+    import pypiwin32
     import win32.lib.win32con as win32con
 except:
     os.system("pip install flask g4f flask_cors pygetwindow keyboard pypiwin32")
@@ -20,7 +20,7 @@ finally:
     import pygetwindow as gw
     import time
     import keyboard
-    import pypiwin32 as win32gui
+    import pypiwin32
     import win32.lib.win32con as win32con
 
 app = Flask(__name__)
