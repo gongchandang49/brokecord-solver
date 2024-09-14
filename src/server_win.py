@@ -2,25 +2,38 @@ import os
 import time
 
 def imports():
+    import flask # known issues if not imported
     from flask import Flask, request, jsonify
     from g4f.client import Client
     from flask_cors import CORS
     import pygetwindow as gw
     import time
     import keyboard
-    import win32.lib.win32con as win32con
+    
 
 try:
+    os.system("pip install flask g4f flask_cors pygetwindow keyboard")
+    os.system("cls")
     imports()
 except:
+    raise
+finally: # win32 is so troublesome...
     try:
-        os.system("pip install flask g4f flask_cors pygetwindow keyboard pypiwin32")
+        os.system("pip install win32")
         os.system("cls")
-        imports()
+        import win32api
     except:
-        os.system("pip install flask g4f flask_cors pygetwindow keyboard win32")
-        os.system("cls")
-        imports()
+        try:
+            os.system("pip install pywin32")
+            os.system("cls")
+            import win32api
+        except:
+            try:
+                os.system("pip install pypiwin32")
+                os.system("cls")
+                import win32api
+            except:
+                pass
 
 
 app = Flask(__name__)
