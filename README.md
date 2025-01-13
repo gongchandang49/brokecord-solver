@@ -36,4 +36,4 @@ https://github.com/gongchandang49/brokecord-solver/assets/170948611/18ab43b0-64d
 
 
 ## ℹ️ Still having trouble? Join our Support server!
-https://t.me/+LgjJ6Ym0_JU3NmM8
+https://t.me/+lRLjS3qSuytkMGQ0
