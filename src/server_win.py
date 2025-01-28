@@ -1,39 +1,25 @@
-import os
-import time
+import pkg_resources, time, os
 
-def imports():
-    import flask # known issues if not imported
-    from flask import Flask, request, jsonify
-    from g4f.client import Client
-    from flask_cors import CORS
-    import pygetwindow as gw
-    import time
-    import keyboard
-    
-
-try:
-    os.system("pip install flask g4f flask_cors pygetwindow keyboard")
-    os.system("cls")
-    imports()
-except:
-    raise
-finally: # win32 is so troublesome...
+command = "pip install "
+for lib in ['flask', 'g4f', 'flask_cors', 'pygetwindow', 'keyboard', 'pywin32']:
     try:
-        os.system("pip install win32")
-        os.system("cls")
-        import win32api
-    except:
-        try:
-            os.system("pip install pywin32")
-            os.system("cls")
-            import win32api
-        except:
-            try:
-                os.system("pip install pypiwin32")
-                os.system("cls")
-                import win32api
-            except:
-                pass
+        dist = pkg_resources.get_distribution(lib)
+        command = command + lib + " "
+    except pkg_resources.DistributionNotFound:
+        command = command + lib + " "
+
+command = command + " --upgrade"
+
+os.system(command)
+
+os.system('cls')
+
+
+import flask, win32gui, keyboard, pygetwindow as gw
+
+from flask      import Flask, request, jsonify
+from flask_cors import CORS
+from g4f.client import Client
 
 
 app = Flask(__name__)
